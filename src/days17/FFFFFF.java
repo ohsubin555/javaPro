@@ -1,74 +1,82 @@
-package days17;
 
-import java.util.ArrayList;
-import java.util.Random;
-import java.util.stream.IntStream;
 
-public class FFFFFF {
+/*
 
-	/**
-	 * @author kenik
-	 * @date 2026. 6. 4. 오후 4:16:40
-	 * @subject days10.Ex03.java
-	 * @content 게임횟수를 입력받아서 
-	 *             로또번호를 발생시켜서 출력하는 예제 
-	 * 
-	 */
-	public static void main(String[] args) {
+코딩 도움말
 
-		int [][] bingo = new int[5][5];
+ BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+ score = Integer.parseInt(input);
 
-		// 2차원 배열에 1~25 정수를 랜덤하게 채워넣는 코딩.
-		/* [1]
-		for(int i=0;i<5;i++) {
-			for(int j=0;j<5;j++) {
-				bingo[i][j] = i*5+j+1;
-			}
-		}
+Scanner scanner = new Scanner(System.in);
+scanner.next();
+scanner.nextInt();
+con = scanner.next().charAt(0);
 
-		for (int i = 0; i < 25; i++) {
-			int x = (int) (Math.random() * 25); // 0~24
-			int y = (int) (Math.random() * 25);
-			int tmp = bingo[x / 5][x % 5];
-			bingo[x / 5][x % 5] = bingo[y / 5][y % 5];
-			bingo[y / 5][y % 5] = tmp;
-		}
-		*/
+Pattern pattern = Pattern.compile(regex);
+Matcher matcher = pattern.matcher(source);
+
+StringTokenizer tokenizer = new StringTokenizer(group1, ",");
+System.out.println(tokenizer.countTokens());
+
+Graphic2D.drawLine(60, '-');
+
+throw new RuntimeException("[오류] 나이는 0~120 이하여야 한다.")
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Override
+@ToString
+@Builder
+
+Arrays.sort(s);
+Arrays.sort(s,new StringComparator() );
+System.out.println(Arrays.toString(s));
+Arrays.sort(s,new Comparator<String>()
+Arrays.sort(s, Collections.reverseOrder());
+ArrayList groupList = new ArrayList();  
+List<String> list = new ArrayList<>(); 
+System.out.println(groupList.size());
+
+FileReader in = new FileReader(fileName)
+import static java.lang.Math.*;
+
+LocalTime t = LocalTime.now();
+LocalDate td = LocalDate.now();
+System.out.println(t.get(ChronoField.HOUR_OF_DAY));
+System.out.println(t.getHour());
+Date d = new Date ();
+DateTimeFormatter dtf = DateTimeFormatter.ofPattern(pattern);
+
+dt.format(DateTimeFormatter.BASIC_ISO_DATE)
+
+Calendar c = Calendar.getInstance();
+
+Period p = Period.between(od, td); 
+Duration d = Duration.between(st, nt);
+
+String fileName = ".\\src\\days18\\1차_조편성.txt";
+FileReader in = new FileReader(fileName);
+BufferedReader br = new BufferedReader(in);
+(line = br.readLine()) != null
+
+ Iterator<ArrayList<String>> ir = class5.iterator();
+ IntStream.rangeClosed(1, 25).forEach(al::add);
+
+TreeSet<Integer> ts = new TreeSet<Integer>();
+Arrays.stream(score).forEach(ts::add);
+
+File f = new File(".\\Sample");
+
+Set <String> set = new HashSet<String>();
+list.stream().mapToInt(s->s.getscore())
+		.forEach(System.out::println);
+
+IntStream is = Arrays.stream(m);
+		is.asDoubleStream();
+ is.boxed().forEach(obj->System.out.println(obj.intValue()));
+
+.sorted(Comparator.comparing(Student::getAge))
+*/
 		
-		// [2]  주머니 25 숫자 넣어두었다.
-		ArrayList<Integer> al = new ArrayList<Integer>();
-//		for (int i = 1; i <= 25; i++) {
-//			al.add(i);
-//		} // for i
-		IntStream.rangeClosed(1, 25).forEach(al::add);
-//		System.out.println( al );
-		
-		// 주머니에서 1개씩 랜덤하게 꺼내와서 배열에 순차적으로 채워넣을 생각.
-		Random rnd = new Random();
-		
-		for (int i = 0, index = -1, n = -1; i < bingo.length; i++) {
-			for (int j = 0; j < bingo[i].length; j++) {
-				index = rnd.nextInt(al.size()); // 0<= <25
-				n = al.remove(index);
-				bingo[i][j] = n;
-			}			
-		}
-
-
-
-
-		// 출력.
-		for (int i = 0; i < bingo.length; i++) {
-			for (int j = 0; j < bingo[i].length; j++) {
-				System.out.printf("[%02d]", bingo[i][j]);
-			}
-			System.out.println();
-		}
-	} // main
-
-} // class
-
-
-
-
-
